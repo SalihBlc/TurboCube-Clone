@@ -8,7 +8,7 @@ public class CharacterDisplay : MonoBehaviour
     public void UpdateCharacter(Characters _newCar)
     {
 
-        //carPrice.text = _newCar.carPrice + "$";
+        
 
 
         if (characterModel.transform.childCount > 0)

@@ -28,7 +28,7 @@ public class SceneControls : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX("click");
         PlayerPrefs.DeleteKey("levelAt");
-        PlayerPrefs.SetInt("levelAt", 2); // veya başlangıç değerine uygun bir değer
+        PlayerPrefs.SetInt("levelAt", 2);
         SceneManager.LoadScene(1);
     }
     public void BackButton()

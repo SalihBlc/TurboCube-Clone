@@ -20,9 +20,7 @@ public class Movement : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float newPositionXX = character.transform.position.x + horizontal * horizontalSpeed * Time.deltaTime;
-        newPositionXX = Mathf.Clamp(newPositionXX, -moveRangeX, moveRangeX); // -1 ile 1 arasında kısıtlamak için
-        /* Vector3 moveDirection = new Vector3(newPositionXX - transform.position.x, 0, forwardSpeed * Time.deltaTime);
-         character.transform.Translate(moveDirection);*/
+        newPositionXX = Mathf.Clamp(newPositionXX, -moveRangeX, moveRangeX);
         character.transform.position = new Vector3(newPositionXX, transform.position.y, transform.position.z);
         character.transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
     }

@@ -13,19 +13,19 @@ public class MovingCube : MonoBehaviour
 
     void Update()
     {
-        // X ekseni boyunca yerel koordinat sistemine göre hareket et
+
         transform.Translate(Vector3.right * moveSpeed * Time.deltaTime, Space.Self);
 
-        // Eğer nesne x = xRange birimine ulaştıysa, geriye dön
+
         if (transform.localPosition.x >= xRange)
         {
-            moveSpeed = -Mathf.Abs(moveSpeed); // Negatif hızla geriye doğru hareket
+            moveSpeed = -Mathf.Abs(moveSpeed);
         }
 
-        // Eğer nesne x = -xRange birimine ulaştıysa, ileriye dön
+
         if (transform.localPosition.x <= -xRang)
         {
-            moveSpeed = Mathf.Abs(moveSpeed); // Pozitif hızla ileriye doğru hareket
+            moveSpeed = Mathf.Abs(moveSpeed);
         }
     }
 }
